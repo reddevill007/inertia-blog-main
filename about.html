@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inertia Blog</title>
+
+    <!--------- CSS Linkage --------->
+    <link rel="stylesheet" href="style.css">
+
+    <!--------- Font Awesome cdn Linkage --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<style>
+    
+    :root{
+        --body: #ffffff;
+        --themeA: #d1a58f;
+        --themeAdark: #dbbebe;
+        --themeALight: #dec4c4;
+        --heading: #303030;
+        --border: rgba(0,0,0,0.15);
+        --icon: #676767;
+        --heading: #b77d7d;
+        --openFont: 'Open Sans', sans-serif;
+        --balooFont: 'Baloo Tamma 2', cursive;
+        --textDark: #000000;
+        --rubikFont:  'Rubik', sans-serif;
+    }
+
+    section.about{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto;
+    }
+
+    section.about .details{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    section.about .details h3{
+        color: var(--themeAdark);
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    section.about .details h1{
+        color: var(--heading);
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 28px;
+    }
+
+    section.about .details p{
+        line-height: 1.5;
+        color: #515151;
+    }
+
+    section.about .details .socials{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    section.about .details .socials a{
+        font-size: 22px;
+        height: 40px;
+        width: 40px;
+        color: var(--themeAdark);
+        background: var(--body);
+        margin-right: 20px;
+        line-height: 40px;
+        text-align: center;
+        box-shadow: 0 8px 6px -6px var(--textDark);
+        transition: all .5s ease;
+    }
+
+    section.about .details .socials a:hover{
+        transform: translateY(-8px);
+        background: var(--themeAdark);
+        color: var(--body);
+    }
+
+    section.about .image{
+        width: 50%;
+    }
+
+    section.about .image img{
+        width: 80%;
+        border: 8px solid var(--themeAdark);
+    }
+
+    @media (max-width:840px) {
+        section.about{
+            flex-direction: column-reverse;
+        }
+
+        section.about .details{
+            width: 80%;
+            padding: 5px;
+        }
+
+        section.about .image{
+            width: 80%;
+        }
+
+        section.about .details .socials a{
+            margin-right: 6px;
+        }
+
+    }
+
+</style>
+
+<body>
+
+    <!---------- Pre-Loader ----------->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    <!---------- Pre-Loader End ----------->
+
+
+    <!--------- Navigation --------->
+    <header class="navigation">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="toogle" id="toogle">
+        </div>
+        <div class="nav-list" id="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li class="active"><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--------- Navigation End --------->
+
+
+
+    <!--------- About Section --------->
+    <section class="about">
+        <div class="details">
+            <h3>Who we are?</h3>
+            <h1>We are Inertia Blog</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio sequi laboriosam tenetur modi commodi enim, cumque corporis fugiat dolor praesentium id magni consequatur, aliquam at mollitia asperiores aperiam animi quod.</p>
+            <div class="socials">
+                <a href="#">
+                    <div class="link-icon fb"><i class="fab fa-facebook-f"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-dribbble"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-vk"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-behance"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-twitter"></i></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="image">
+            <img src="vector-11.jpg" alt="">
+        </div>
+    </section>
+    <!--------- About Section End --------->
+
+
+    <!--------- Footer--------->
+    <footer class="foot">
+        <div class="foot-logo">
+            <img src="signature.png" alt="logo">
+        </div>
+        <div class="foot-links">
+            <a href="#">
+                <div class="link-name">Facebook</div>
+                <div class="link-icon fb"><i class="fab fa-facebook-f"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Dribbble</div>
+                <div class="link-icon"><i class="fab fa-dribbble"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">VK</div>
+                <div class="link-icon"><i class="fab fa-vk"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Behance</div>
+                <div class="link-icon"><i class="fab fa-behance"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Instagram</div>
+                <div class="link-icon"><i class="fab fa-instagram"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Twitter</div>
+                <div class="link-icon"><i class="fab fa-twitter"></i></div>
+            </a>
+        </div>
+        <div class="join-btn">
+            <form action="submit.html">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit"><i class="fab fa-telegram-plane"></i> Join Now</button>
+            </form>
+        </div>
+        <div class="copy">
+            Copyright &copy; 2021 Made by Saurabh Pandey
+        </div>
+    </footer>
+    <!--------- Footer End--------->
+
+
+
+    <!--------- JavaScript Linkage --------->
+    <script src="app.js"></script>
+</body>
+
+</html>

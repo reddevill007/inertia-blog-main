@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inertia Blog</title>
+
+    <!--------- CSS Linkage --------->
+    <link rel="stylesheet" href="style.css">
+
+    <!--------- Font Awesome cdn Linkage --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<style>
+    :root {
+        --body: #ffffff;
+        --themeA: #d1a58f;
+        --themeAdark: #dbbebe;
+        --themeALight: #dec4c4;
+        --heading: #303030;
+        --border: rgba(0, 0, 0, 0.15);
+        --icon: #676767;
+        --heading: #b77d7d;
+        --openFont: 'Open Sans', sans-serif;
+        --balooFont: 'Baloo Tamma 2', cursive;
+        --textDark: #000000;
+        --rubikFont: 'Rubik', sans-serif;
+    }
+
+    section.read{
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    section.read .read-content{
+        width: 80%;
+    }
+
+    
+
+    section.read .read-content .read-img{
+        width: 90%;
+        margin: 0 auto;
+        border: 1px solid var(--textDark);
+    }
+
+    section.read .read-content .read-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 8px solid var(--body);
+    }
+
+    section.read .read-content .head{
+        margin: 0 auto;
+        text-align: left;
+        width: 90%;
+    }
+
+    section.read .read-content .head h1{
+        font-weight: 600;
+        padding: 15px 0;
+    }
+
+    section.read .read-content .head a{
+        font-size: 13px;
+        color: var(--heading);
+        background: var(--themeA);
+        display: inline-block;
+        padding: 2px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    section.read .read-content .main{
+        margin: 20px auto;
+        text-align: left;
+        width: 90%;
+    }
+
+    section.read .read-content .main p{
+        line-height: 1.5;
+        color: #515151;
+
+    }
+
+    section.read .read-content .main .high-box{
+        margin-top: 0 auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section.read .read-content .main .high-box p{
+        width: 50%;
+        background: #f6f6f6;
+        padding: 30px;
+        margin: 10px 0;
+    }
+
+    section.read .read-content .main .about-blog{
+        margin-top: 20px;
+        display: inline-block;
+    }
+    
+    section.read .read-content .main .tags i,
+    section.read .read-content .main .about-blog i{
+        background: #f2f2f2;
+        height: 30px;
+        width: 30px;
+        font-size: 15px;
+        margin-right: 6px;
+        text-align: center;
+        line-height: 30px;
+        border: 1px solid #e6e6e6;
+        margin-bottom: 10px;
+    }
+    
+    section.read .read-content .main .tags span,
+    section.read .read-content .main .about-blog span{
+        margin-bottom: 10px;
+        background: var(--body);
+        height: 30px;
+        font-size: 15px;
+        margin-right: 8px;
+        text-align: center;
+        line-height: 30px;
+        margin-right: 10px;
+        padding: 4px;
+        border: 1px solid #e6e6e6;
+    }
+
+    section.read .read-content .main .share-bar{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: #191919;
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    section.read .read-content .main .share-bar a{
+        width: 50px;
+        height: 35px;
+        color: var(--body);
+        line-height: 35px;
+        font-size: 22px;
+        text-align: center;
+        transition: all .5s smooth;
+    }
+    
+    section.read .read-content .main .share-bar a:hover{
+        background: var(--body);
+        color: #191919;
+    }
+
+    section.read .read-content .main .control{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background: #191919;
+        padding: 20px;
+        margin: 35px 0;
+    }
+
+    section.read .read-content .main .control .next,
+    section.read .read-content .main .control .prev{
+        width: 50%;
+        display: flex;
+        padding-right: 10px;  
+        justify-content: space-between;  
+    }
+
+    section.read .read-content .main .control h3{
+        font-size: 17px;
+        color: var(--body);
+        margin-left: 8px;
+        line-height: 50px;
+        text-align:end
+    }
+    
+    section.read .read-content .main .control .next{
+        padding-right: 0;
+        padding-left: 10px;
+    }
+    
+    section.read .read-content .main .control a{
+        position: relative;
+        color: #191919;
+    }
+
+    section.read .read-content .main .control i{
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 30px;
+        background: var(--body);
+    }
+
+    section.read .read-content .main .related{
+        border: 1px solid #191919;
+        margin-top: 40px;
+    }
+
+    section.read .read-content .main .related h2{
+        padding: 20px 0;
+        background: #191919;
+        color: var(--body);
+        padding-left: 10px;
+    }
+
+    section.read .read-content .main .related .rel-post{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.read .read-content .main .related .rel-post .rel{
+        padding: 20px 20px;
+    }
+    
+    section.read .read-content .main .related .rel-post .rel .rel-img{
+        width: 150px;
+        height: 150px;
+        border: 1px solid var(--textDark);
+        margin: 0 auto;
+    }
+
+    section.read .read-content .main .related .rel-post .rel .rel-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border: 4px solid var(--body);
+    }
+
+    section.read .read-content .main .related .rel-post .rel a{
+        color: #191919;
+    }
+    
+    section.read .read-content .main .related .rel-post .rel a h3{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    section.read .read-content .main .related .rel-post .rel a:hover h3{
+        color: #5a5454;
+    }
+
+    @media (max-width:840px) {
+        
+        section.read .read-content{
+            width: 95%;
+        }
+
+    }
+
+    @media (max-width:710px) {
+        
+        section.read .read-content .main .related .rel-post{
+            flex-direction: column;
+        }
+
+        section.read .read-content .main .high-box p{
+            width: 90%;
+            font-size: 12px;
+        }
+
+    }
+
+
+</style>
+
+<body>
+
+    <!---------- Pre-Loader ----------->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    <!---------- Pre-Loader End ----------->
+
+
+    <!--------- Navigation --------->
+    <header class="navigation">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="toogle" id="toogle">
+        </div>
+        <div class="nav-list" id="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="blog.html">Blogs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--------- Navigation End --------->
+
+
+    <!--------- Blog --------->
+    <section class="read">
+        <div class="read-content">
+            <div class="head">
+                <h1>Camping adventure in the Great Smoky</h1>
+                <a href="#"><i class="far fa-clock"></i> 30, May, 2021</a>
+            </div>
+            <div class="read-img">
+                <img src="image-1.jpg" alt="image">
+            </div>
+            <div class="main">
+                <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.</p>
+
+                <div class="high-box">
+                    <p class="highlight">Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt.</p>
+                </div>
+
+                <p>In the beautiful surroundings of Upcote Farm in Cheltenham, 2000 Trees festival is a gem of a find if you’ve been lucky enough…I found this festival in 2008 when ‘Reuben’ were due to headline, but even though they disbanded a few weeks prior to the festival, us fans still decided to turn up, and boy am I glad I did… Being a small sized 5000 capacity festival, but not enough to have at the bars and toilets. The balance between atmosphere and accessibility is second to none. The food stalls are all hand picked, the same with the local ciders/ales and beers, the organisers have really nailed it on the head, you can tell they themselves are, as well as bringing in some big names, it really does cater for every type music fan</p>
+
+                <div class="high-box">
+                    <p class="highlight">Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
+                </div>
+
+                <p>Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Nulla quis lorem ut libero malesuada feugiat. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.</p>
+
+                <div class="about-blog">
+                    <i class="fas fa-user"></i> <span>Admin</span>
+                </div>
+
+                <div class="about-blog">
+                    <i class="far fa-clock"></i> <span>30, May, 2021</span>
+                </div>
+
+                <div class="about-blog">
+                    <i class="fas fa-folder-open"></i> <span>Mountains</span>
+                </div>
+
+                <div class="tags">
+                    <i class="fas fa-tags"></i> <span>Adventure</span> <span>Camping</span> <span>Mountains</span>
+                </div>
+
+                <div class="share-bar">
+                    <a href="#">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-dribbble"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fab fa-behance"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#"><i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+
+                <div class="control">
+                    <div class="prev">
+                        <a href="#"><i class="fas fa-chevron-left"></i></a>
+                        <h3>Previous</h3>
+                    </div>
+                    <div class="next">
+                        <h3>Next</h3>
+                        <a href="#"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="related">
+                    <h2>Related Posts...</h2>
+                    
+                    <div class="rel-post">
+                        <div class="rel">
+                            <div class="rel-img">
+                                <img src="image-2.jpg" alt="image">
+                            </div>
+                            <a href="#"><h3>Lorem ipsum dolor sit amet.</h3></a>
+                        </div>
+                        <div class="rel">
+                            <div class="rel-img">
+                                <img src="image-3.jpg" alt="image">
+                            </div>
+                            <a href="#"><h3>Lorem ipsum dolor sit amet.</h3></a>
+                        </div>
+                        <div class="rel">
+                            <div class="rel-img">
+                                <img src="image-4.jpg" alt="image">
+                            </div>
+                            <a href="#"><h3>Lorem ipsum dolor sit amet.</h3></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------- Blog End --------->
+
+
+    <!--------- Footer--------->
+    <footer class="foot">
+        <div class="foot-logo">
+            <img src="signature.png" alt="logo">
+        </div>
+        <div class="foot-links">
+            <a href="#">
+                <div class="link-name">Facebook</div>
+                <div class="link-icon fb"><i class="fab fa-facebook-f"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Dribbble</div>
+                <div class="link-icon"><i class="fab fa-dribbble"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">VK</div>
+                <div class="link-icon"><i class="fab fa-vk"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Behance</div>
+                <div class="link-icon"><i class="fab fa-behance"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Instagram</div>
+                <div class="link-icon"><i class="fab fa-instagram"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Twitter</div>
+                <div class="link-icon"><i class="fab fa-twitter"></i></div>
+            </a>
+        </div>
+        <div class="join-btn">
+            <form action="submit.html">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit"><i class="fab fa-telegram-plane"></i> Join Now</button>
+            </form>
+        </div>
+        <div class="copy">
+            Copyright &copy; 2021 Made by Saurabh Pandey
+        </div>
+    </footer>
+    <!--------- Footer End--------->
+
+
+
+
+    <!--------- JavaScript Linkage --------->
+    <script src="app.js"></script>
+</body>
+
+</html>

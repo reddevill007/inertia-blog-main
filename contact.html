@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inertia Blog</title>
+
+    <!--------- CSS Linkage --------->
+    <link rel="stylesheet" href="style.css">
+
+    <!--------- Font Awesome cdn Linkage --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<style>
+    :root {
+        --body: #ffffff;
+        --themeA: #d1a58f;
+        --themeAdark: #dbbebe;
+        --themeALight: #dec4c4;
+        --heading: #303030;
+        --border: rgba(0, 0, 0, 0.15);
+        --icon: #676767;
+        --heading: #b77d7d;
+        --openFont: 'Open Sans', sans-serif;
+        --balooFont: 'Baloo Tamma 2', cursive;
+        --textDark: #000000;
+        --rubikFont: 'Rubik', sans-serif;
+    }
+
+    section.contact {
+        width: 80vw;
+        background-color: var(--themeA);
+        background-image: linear-gradient(315deg, #612424 0%, var(--themeAdark) 74%);
+        margin: 20px auto;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        box-shadow: 0 8px 6px -6px var(--textDark);
+    }
+
+    section.contact .contact-info {
+        width: 50%;
+    }
+
+    section.contact .contact-info h1 {
+        color: var(--body);
+        font-family: var(--openFont);
+        font-size: 28px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    section.contact .contact-info p {
+        margin-bottom: 20px;
+        color: var(--icon);
+        font-family: var(--openFont);
+        line-height: 1.5;
+    }
+
+    section.contact .contact-info .info{
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        color: #612424;
+        height: 50px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+    }
+
+    section.contact .contact-info .info i{
+        background: var(--body);
+        border-radius: 50%;
+        margin-right: 10px;
+        height: 50px;
+        width: 50px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.contact .contact-info  .socials{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    section.contact .contact-info  .socials a{
+        font-size: 22px;
+        height: 40px;
+        width: 40px;
+        color: var(--themeAdark);
+        background: var(--body);
+        margin-right: 20px;
+        line-height: 40px;
+        text-align: center;
+        box-shadow: 0 8px 6px -6px var(--textDark);
+        transition: all .5s ease;
+    }
+
+    section.contact .contact-info  .socials a:hover{
+        transform: translateY(-8px);
+        background: var(--themeAdark);
+        color: var(--body);
+    }
+
+    section.contact .contact-img {
+        width: 50%;
+    }
+
+    section.contact .contact-img img{
+        width: 100%;
+    }
+
+    @media (max-width:925px) {
+
+        section.contact{
+            flex-direction: column-reverse;
+        }
+
+        section.contact .contact-img{
+            width: 100%;
+        }
+
+        section.contact .contact-info {
+            width: 100%;
+        }
+
+        section.contact .contact-info .info{
+            font-size: 16px;
+        }
+
+    }
+
+    @media (max-width:485px){
+
+        section.contact{
+            width: 90vw;
+        }
+
+        section.contact .contact-info  .socials a{
+            margin-right: 10px;
+        }
+
+        section.contact .contact-info .info i{
+            width: 35px;
+            height: 35px;
+            font-size: 20px;
+            list-style: 35px;
+        }
+    }
+
+</style>
+
+<body>
+
+    <!---------- Pre-Loader ----------->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+        </div>
+    </div>
+    <!---------- Pre-Loader End ----------->
+
+
+    <!--------- Navigation --------->
+    <header class="navigation">
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="toogle" id="toogle">
+        </div>
+        <div class="nav-list" id="nav-list">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blogs</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!--------- Navigation End --------->
+
+
+    <!--------- Contact --------->
+    <section class="contact">
+        <div class="contact-info">
+            <h1>Contact Information</h1>
+            <p>Get in touch Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatibus sit labore ex,
+                aliquid architecto?</p>
+            <div class="info">
+                <i class="fas fa-envelope"></i> shivampandey2900@gmail.com
+            </div>
+            <div class="info">
+                <i class="fas fa-phone-alt"></i> 7009583486
+            </div>
+            <div class="info">
+                <i class="fas fa-street-view"></i> Lucknow, Uttar Pradesh
+            </div>
+            <div class="socials">
+                <a href="#">
+                    <div class="link-icon fb"><i class="fab fa-facebook-f"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-dribbble"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-vk"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-behance"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-instagram"></i></div>
+                </a>
+                <a href="#">
+                    <div class="link-icon"><i class="fab fa-twitter"></i></div>
+                </a>
+            </div>
+        </div>
+        <div class="contact-img">
+            <img src="contact.png" alt="image">
+        </div>
+    </section>
+    <!--------- Contact End --------->
+
+
+    <!--------- Footer--------->
+    <footer class="foot">
+        <div class="foot-logo">
+            <img src="signature.png" alt="logo">
+        </div>
+        <div class="foot-links">
+            <a href="#">
+                <div class="link-name">Facebook</div>
+                <div class="link-icon fb"><i class="fab fa-facebook-f"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Dribbble</div>
+                <div class="link-icon"><i class="fab fa-dribbble"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">VK</div>
+                <div class="link-icon"><i class="fab fa-vk"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Behance</div>
+                <div class="link-icon"><i class="fab fa-behance"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Instagram</div>
+                <div class="link-icon"><i class="fab fa-instagram"></i></div>
+            </a>
+            <a href="#">
+                <div class="link-name">Twitter</div>
+                <div class="link-icon"><i class="fab fa-twitter"></i></div>
+            </a>
+        </div>
+        <div class="join-btn">
+            <form action="submit.html">
+                <input type="email" placeholder="Enter your email...">
+                <button type="submit"><i class="fab fa-telegram-plane"></i> Join Now</button>
+            </form>
+        </div>
+        <div class="copy">
+            Copyright &copy; 2021 Made by Saurabh Pandey
+        </div>
+    </footer>
+    <!--------- Footer End--------->
+
+
+
+
+    <!--------- JavaScript Linkage --------->
+    <script src="app.js"></script>
+</body>
+
+</html>

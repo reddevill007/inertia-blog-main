@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--------- Font Awesome cdn Linkage --------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<style>
+    *,
+    *::after,
+    *::before{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style: none;
+        text-decoration: none;
+        scroll-behavior: smooth;
+    }
+
+
+    section.submit{
+        height: 100vh;
+        width: 100vw;
+        background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    section.submit h1{
+        height: 40px;
+        color: white;
+        font-weight: 700;
+        font-family: 'Open Sans', sans-serif;
+        margin-bottom: 40px;
+    }
+    
+    section.submit a{
+        font-family: 'Open Sans', sans-serif;
+        padding: 10px;
+        color: black;
+        background: white;
+        border: 2px solid black;
+    }
+
+    section.submit a:hover{
+        background: #b77d7d;
+        border-color: #fff;
+        color: #fff;
+    }
+
+</style>
+
+<body>
+    <section class="submit">
+        <h1>Form Submitted Successfully</h1>
+        <a href="index.html"><i class="fas fa-home"></i> Return to home</a>
+    </section>
+</body>
+</html>
